@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Songs We Somehow Don't Have 🎧</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="music-page">
+
+    <main class="music-container">
+
+        <p class="chapter-number">CHAPTER FOUR</p>
+
+        <h1>The Songs We Somehow Don't Have 🎧</h1>
+
+        <p class="music-intro">
+            We don't really have "our songs."
+        </p>
+
+        <p class="music-intro">
+            And honestly? That's okay.
+        </p>
+
+        <div class="song-card">
+
+            <div class="song-icon">🎵</div>
+
+            <h2>A Thousand Years</h2>
+
+            <p class="artist">Christina Perri</p>
+
+            <p class="song-memory">
+                I remember sending you <i>A Thousand Years</i> by Christina Perri
+                a thousand years ago, and you actually listened to the whole thing.
+            </p>
+
+        </div>
+
+        <div class="song-card">
+
+            <div class="song-icon">🎧</div>
+
+            <h2>Growing Pain</h2>
+
+            <p class="artist">Yeat</p>
+
+            <p class="song-memory">
+                You recommended <i>Growing Pain</i> by Yeat to me,
+                and I actually listened to it a couple of times.
+                Believe it or not...
+            </p>
+
+        </div>
+
+        <button class="reveal-button" id="yeatButton">
+            Wait... there's something I have to admit 👀
+        </button>
+
+        <div class="yeat-reveal" id="yeatReveal">
+
+            <p>I listened to Yeat because of you.</p>
+
+            <span>😭</span>
+
+        </div>
+
+        <div class="album-ending">
+
+            <p>But somehow...</p>
+
+            <h2>we have a whole album of memories.</h2>
+
+            <p class="little-joke">
+                (Cringe? Ik baby, it made more sense in my head.) 😭
+            </p>
+
+        </div>
+
+        <a href="chapter5.html" class="next-button">
+            There's more... ✦
+        </a>
+
+    </main>
+
+    <script>
+
+        const yeatButton = document.getElementById("yeatButton");
+        const yeatReveal = document.getElementById("yeatReveal");
+
+        yeatButton.addEventListener("click", function () {
+
+            yeatReveal.classList.add("show");
+
+            yeatButton.style.display = "none";
+
+        });
+
+    </script>
+
+</body>
+
+</html>
