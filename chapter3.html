@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>20 Things I Love About You ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="reasons-page">
+
+    <main class="reasons-container">
+
+        <p class="chapter-number">CHAPTER THREE</p>
+
+        <h1>20 Things I Love About You</h1>
+
+        <p class="intro-text">
+            You're turning 20...
+        </p>
+
+        <p class="intro-text">
+            So naturally, I had to give you 20 reasons I love you.
+        </p>
+
+        <p class="little-joke">
+            Although choosing only 20 was actually rude because I have over 100. 😭
+        </p>
+
+        <div class="reason-counter">
+            <span id="currentNumber">01</span>
+            <span>/ 20</span>
+        </div>
+
+        <div class="reason-card" id="reasonCard">
+
+            <p class="reason-number" id="reasonNumber">01</p>
+
+            <h2 id="reasonTitle">You, of course. ❤️</h2>
+
+            <p id="reasonText">
+                Your whole being.
+            </p>
+
+            <button class="reason-button" id="nextButton">
+                Next ❤️
+            </button>
+
+        </div>
+
+        <div class="final-message" id="finalMessage">
+
+            <p class="final-small">
+                20 reasons.
+            </p>
+
+            <p>And somehow...</p>
+
+            <p>I still haven't said everything.</p>
+
+            <p>I have over a 100.</p>
+
+            <h2>I love everything about you, Michael. ❤️</h2>
+
+            <p class="little-joke">
+                Happy 20th, my babyyy. 🖤
+            </p>
+
+            <a href="chapter4.html" class="next-button">
+                There's still more... ✦
+            </a>
+
+        </div>
+
+    </main>
+
+    <script>
+
+        const reasons = [
+
+            ["You, of course. ❤️", "Your whole being."],
+
+            ["Your smile.", ""],
+
+            ["Your sense of humour.", "Which is still not better than mine."],
+
+            ["How you remember the little things.", ""],
+
+            ["How patient you are.", "One of us has to be the patient partner, and it's definitely not me."],
+
+            ["How considerate you are.", "Not just when it comes to me, but to others too."],
+
+            ["Your nose. 👃🏽", ""],
+
+            ["Your hairline.", "Make our children no bald. 😭"],
+
+            ["Your smell.", ""],
+
+            ["How observant you are.", ""],
+
+            ["Your voice.", ""],
+
+            ["How you stay calm in the midst of chaos.", "Again, it's gotta be one of the partners rii?"],
+
+            ["How you listen without passing judgement.", ""],
+
+            ["How confident you are in me.", ""],
+
+            ["Ewoo... 😭", "I don dey cry sha. How you look at me."],
+
+            ["How you encourage me.", ""],
+
+            ["Your yansh. 😭", "This one suppose dey number 2."],
+
+            ["How open you are with me.", ""],
+
+            ["Your face.", "You be fine boy o."],
+
+            ["How much you love me. ❤️", "And honestly? I think that's my favourite one."]
+        ];
+
+        let current = 0;
+
+        const card = document.getElementById("reasonCard");
+        const number = document.getElementById("reasonNumber");
+        const counter = document.getElementById("currentNumber");
+        const title = document.getElementById("reasonTitle");
+        const text = document.getElementById("reasonText");
+        const button = document.getElementById("nextButton");
+        const finalMessage = document.getElementById("finalMessage");
+
+        button.addEventListener("click", () => {
+
+            current++;
+
+            if (current >= reasons.length) {
+
+                card.style.display = "none";
+                finalMessage.classList.add("show");
+
+                return;
+            }
+
+            const formattedNumber = String(current + 1).padStart(2, "0");
+
+            number.textContent = formattedNumber;
+            counter.textContent = formattedNumber;
+
+            title.textContent = reasons[current][0];
+            text.textContent = reasons[current][1];
+
+            card.classList.remove("reason-animate");
+
+            void card.offsetWidth;
+
+            card.classList.add("reason-animate");
+
+        });
+
+    </script>
+
+</body>
+
+  </html>
