@@ -60,3 +60,121 @@ opacity:1;
 transform:translateY(0);
 }
                            }
+/* ================================
+   PAGE 2 — BEFORE I MET YOU
+   ================================ */
+
+.chapter-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 50% 20%, rgba(80, 70, 120, 0.25), transparent 35%),
+        linear-gradient(180deg, #030303 0%, #080817 55%, #000000 100%);
+    color: #ffffff;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: block;
+}
+
+.chapter-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 70px 25px 80px;
+    text-align: center;
+}
+
+.chapter-number {
+    font-family: Georgia, serif;
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: #c9a7ff;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.chapter-page h1 {
+    font-size: clamp(42px, 11vw, 75px);
+    font-weight: 400;
+    margin-bottom: 40px;
+    line-height: 1;
+    color: #ffffff;
+    text-shadow: 0 0 25px rgba(190, 150, 255, 0.25);
+}
+
+/* PHOTO */
+
+.photo-frame {
+    width: min(85vw, 430px);
+    margin: 0 auto 18px;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(210, 180, 255, 0.5);
+    border-radius: 4px;
+    box-shadow:
+        0 0 30px rgba(150, 100, 255, 0.18),
+        0 20px 60px rgba(0, 0, 0, 0.7);
+}
+
+.photo-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 2px;
+}
+
+/* WRITING */
+
+.chapter-text {
+    max-width: 600px;
+    margin: 35px auto 0;
+    font-size: clamp(21px, 5vw, 28px);
+    line-height: 1.65;
+    color: #f4f0f7;
+}
+
+.little-joke {
+    margin: 20px auto 0;
+    font-size: clamp(18px, 4.5vw, 24px);
+    font-style: italic;
+    color: #c9a7ff;
+}
+
+.divider {
+    margin: 42px 0;
+    font-size: 22px;
+    color: #d9b8ff;
+    text-shadow: 0 0 15px rgba(200, 160, 255, 0.8);
+}
+
+.chapter-ending {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: clamp(25px, 6vw, 34px);
+    line-height: 1.5;
+    color: #ffffff;
+}
+
+/* NEXT BUTTON */
+
+.next-button {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 14px 28px;
+    border: 1px solid rgba(210, 180, 255, 0.7);
+    border-radius: 50px;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+    text-decoration: none;
+    font-family: Georgia, serif;
+    font-size: 17px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(160, 110, 255, 0.15);
+}
+
+.next-button:hover {
+    background: rgba(190, 140, 255, 0.15);
+    box-shadow: 0 0 30px rgba(190, 140, 255, 0.4);
+    transform: translateY(-3px);
+}
