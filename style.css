@@ -502,7 +502,7 @@ transform:translateY(0);
 
 .reveal-button:hover {
     transform: scale(1.04);
-    box-shadow: 0 0 25px rgba(190, 140, 255, 0.35);
+    box-shadow: 0 0 25px PAGE(190, 140, 255, 0.35);
 }
 
 .yeat-reveal {
@@ -521,39 +521,298 @@ transform:translateY(0);
     display: block;
     margin-top: 10px;
 }
+/* ========================================
+   PAGE 5 — A LITTLE MUSIC THING
+   ======================================== */
+
+.music-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 50% 15%, rgba(110, 80, 150, 0.22), transparent 32%),
+        linear-gradient(180deg, #020202 0%, #09070d 55%, #000000 100%);
+    color: #ffffff;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.music-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 70px 24px 90px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.music-page .chapter-number {
+    font-family: Georgia, serif;
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: #c9a7ff;
+    margin-bottom: 18px;
+    opacity: 0.9;
+}
+
+.music-page h1 {
+    font-size: clamp(42px, 11vw, 72px);
+    font-weight: 400;
+    line-height: 1.05;
+    margin: 0 0 38px;
+    color: #ffffff;
+    text-shadow: 0 0 25px rgba(190, 150, 255, 0.25);
+}
+
+.music-intro {
+    max-width: 590px;
+    margin: 0 auto 18px;
+    font-size: clamp(21px, 5vw, 28px);
+    line-height: 1.6;
+    color: #eee8f3;
+}
+
+.music-divider {
+    margin: 38px 0;
+    font-size: 22px;
+    color: #d9b8ff;
+    text-shadow: 0 0 18px rgba(200, 160, 255, 0.8);
+}
+
+
+/* ================================
+   MUSIC CARDS
+   ================================ */
+
+.music-card {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 590px;
+    margin: 30px auto 0;
+    padding: 25px 22px;
+    box-sizing: border-box;
+
+    text-decoration: none;
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.08),
+            rgba(150, 100, 210, 0.07)
+        );
+
+    border: 1px solid rgba(210, 180, 255, 0.35);
+    border-radius: 18px;
+
+    box-shadow:
+        0 0 25px rgba(150, 100, 255, 0.08),
+        0 18px 45px rgba(0, 0, 0, 0.45);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.music-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(220, 190, 255, 0.7);
+    box-shadow:
+        0 0 35px rgba(170, 120, 255, 0.2),
+        0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.music-card:active {
+    transform: scale(0.98);
+}
+
+
+/* MUSIC ICON */
+
+.music-icon {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(190, 145, 255, 0.12);
+    border: 1px solid rgba(210, 180, 255, 0.35);
+
+    color: #d9b8ff;
+    font-size: 30px;
+
+    box-shadow: 0 0 20px rgba(180, 130, 255, 0.15);
+}
+
+
+/* SONG INFORMATION */
+
+.music-info h2 {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: clamp(24px, 6vw, 32px);
+    font-weight: 400;
+}
+
+.music-info p {
+    margin: 7px 0 18px;
+    font-size: 18px;
+    color: #bdb5c5;
+}
+
+
+/* TAP TO LISTEN */
+
+.listen-button {
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    border: 1px solid rgba(210, 180, 255, 0.45);
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    font-family: Georgia, serif;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+
+    color: #eee8f5;
+
+    box-shadow: 0 0 15px rgba(160, 110, 255, 0.08);
+}
+
+.listen-button span {
+    color: #d9b8ff;
+    margin-left: 5px;
+}
+
+
+/* ================================
+   MEMORIES UNDER THE SONGS
+   ================================ */
+
+.memory-text {
+    max-width: 590px;
+    margin: 28px auto 45px;
+
+    font-size: clamp(21px, 5vw, 27px);
+    line-height: 1.65;
+
+    color: #f4f0f7;
+}
+
+.memory-text p {
+    margin: 0 0 18px;
+}
+
+.memory-text em {
+    color: #d9b8ff;
+    font-style: italic;
+}
+
+.dramatic {
+    margin-top: 25px !important;
+    margin-bottom: 8px !important;
+
+    font-size: 0.9em;
+    font-style: italic;
+    color: #c9a7ff;
+
+    letter-spacing: 1px;
+}
+
+
+/* ================================
+   ENDING
+   ================================ */
 
 .album-ending {
-    margin: 70px auto 30px;
-    max-width: 600px;
-    font-size: clamp(22px, 6vw, 32px);
-    line-height: 1.6;
+    max-width: 570px;
+    margin: 0 auto;
+
+    font-size: clamp(27px, 7vw, 38px);
+    line-height: 1.45;
+
+    color: #ffffff;
+
+    text-shadow: 0 0 22px rgba(190, 150, 255, 0.2);
 }
 
-.album-ending h2 {
-    font-size: clamp(29px, 7vw, 43px);
-    font-weight: 400;
-    margin: 15px 0 20px;
+.tiny-joke {
+    max-width: 500px;
+    margin: 20px auto 0;
+
+    font-size: clamp(17px, 4.5vw, 22px);
+    line-height: 1.5;
+
+    color: #b9a9c7;
+    font-style: italic;
 }
 
-@keyframes musicReveal {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* ================================
+   NEXT BUTTON
+   ================================ */
+
+.music-page .next-button {
+    display: inline-block;
+
+    margin-top: 50px;
+    padding: 14px 28px;
+
+    border: 1px solid rgba(210, 180, 255, 0.7);
+    border-radius: 50px;
+
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+
+    text-decoration: none;
+
+    font-family: Georgia, serif;
+    font-size: 17px;
+    letter-spacing: 1px;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 0 20px rgba(160, 110, 255, 0.15);
 }
 
-@media (max-width: 600px) {
+.music-page .next-button:hover {
+    background: rgba(190, 140, 255, 0.15);
+
+    box-shadow:
+        0 0 30px rgba(190, 140, 255, 0.4);
+
+    transform: translateY(-3px);
+}
+
+
+/* ================================
+   SMALL PHONES
+   ================================ */
+
+@media (max-width: 400px) {
 
     .music-container {
-        padding: 50px 18px 70px;
+        padding: 55px 18px 75px;
     }
 
-    .song-card {
-        padding: 30px 19px;
+    .music-card {
+        padding: 22px 16px;
     }
-  }
+
+    .music-intro {
+        font-size: 21px;
+    }
+
+    .memory-text {
+        font-size: 21px;
+    }
+}
