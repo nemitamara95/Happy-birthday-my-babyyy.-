@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Purple Looks Good on You 💜</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="chapter-page">
+
+    <main class="chapter-container">
+
+        <p class="chapter-number">CHAPTER TWO</p>
+
+        <h1>Purple Looks Good on You 💜</h1>
+
+        <div class="photo-frame" id="memoryPhoto">
+            <img src="WA_1786149941686.jpeg" alt="Mike in purple">
+        </div>
+
+        <p class="chapter-text">
+            I've always loved this picture, you look so good in purple.
+            I remember that presentation day where you all had to dress
+            in corporate outfits.
+        </p>
+
+        <p class="chapter-text">
+            One of the first pictures I'll never forget.
+            Oh chaii my love! 💕
+        </p>
+
+        <p class="little-joke">
+            Tap the picture... 👀
+        </p>
+
+        <div id="secretMessage" class="secret-message">
+
+            <p class="chapter-text">
+                I don't think you realise how often I look at your pictures
+                and think...
+            </p>
+
+            <p class="chapter-ending">
+                chaii that's my babyyy ❤️
+            </p>
+
+            <p class="little-joke">
+                Na to dey watch your video dey drink water,
+                wetin be food? 😭
+            </p>
+
+        </div>
+
+        <a href="chapter3.html" class="next-button">
+            There's more... ✦
+        </a>
+
+    </main>
+
+    <script>
+        const photo = document.getElementById("memoryPhoto");
+        const message = document.getElementById("secretMessage");
+
+        photo.addEventListener("click", function () {
+            message.classList.add("show");
+            photo.classList.add("photo-clicked");
+        });
+    </script>
+
+</body>
+
+  </html>
