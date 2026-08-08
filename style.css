@@ -1121,3 +1121,62 @@ transform:translateY(0);
         margin-right: 7px;
     }
                      }
+/* ========================================
+   LOVE LETTER — SCROLL FIX
+   ======================================== */
+
+.parchment {
+    max-height: 0;
+    overflow: hidden;
+
+    transition:
+        max-height 1.2s ease,
+        padding 1.2s ease;
+}
+
+.parchment.letter-open {
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 0;
+    
+    /* Makes the scrolling feel natural on phones */
+    -webkit-overflow-scrolling: touch;
+
+    /* Keeps the scrollbar subtle */
+    scrollbar-width: thin;
+}
+
+/* Keep the letter itself properly spaced */
+.parchment.letter-open .letter-content {
+    padding: 45px 32px 60px;
+}
+
+
+/* Subtle scrollbar for Chrome / Android */
+
+.parchment.letter-open::-webkit-scrollbar {
+    width: 5px;
+}
+
+.parchment.letter-open::-webkit-scrollbar-track {
+    background: rgba(80, 45, 20, 0.08);
+}
+
+.parchment.letter-open::-webkit-scrollbar-thumb {
+    background: rgba(90, 55, 30, 0.45);
+    border-radius: 10px;
+}
+
+
+/* Smaller screens */
+
+@media (max-width: 600px) {
+
+    .parchment.letter-open {
+        max-height: 68vh;
+    }
+
+    .parchment.letter-open .letter-content {
+        padding: 38px 22px 55px;
+    }
+          }
