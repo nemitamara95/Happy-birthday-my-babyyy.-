@@ -1180,3 +1180,207 @@ transform:translateY(0);
         padding: 38px 22px 55px;
     }
           }
+/* ========================================
+   FRONT PAGE — FINAL POLISH
+   ======================================== */
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 50% 45%,
+            rgba(110, 80, 170, 0.16),
+            transparent 35%),
+        radial-gradient(circle at 20% 20%,
+            rgba(255, 255, 255, 0.04),
+            transparent 25%),
+        linear-gradient(180deg, #020204 0%, #05040a 55%, #000000 100%);
+    overflow-x: hidden;
+}
+
+
+/* ================================
+   STAR FIELD
+   ================================ */
+
+.stars {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+
+    background-image:
+        radial-gradient(circle, rgba(255,255,255,0.9) 1px, transparent 1.5px),
+        radial-gradient(circle, rgba(210,185,255,0.7) 1px, transparent 1.5px),
+        radial-gradient(circle, rgba(255,255,255,0.5) 0.8px, transparent 1.2px);
+
+    background-size:
+        95px 95px,
+        145px 145px,
+        210px 210px;
+
+    background-position:
+        10px 20px,
+        45px 80px,
+        90px 30px;
+
+    opacity: 0.75;
+}
+
+
+/* ================================
+   HERO
+   ================================ */
+
+.hero {
+    position: relative;
+    z-index: 1;
+
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    padding:
+        70px 24px
+        calc(70px + env(safe-area-inset-bottom));
+
+    text-align: center;
+}
+
+
+/* ================================
+   TYPEWRITER
+   ================================ */
+
+#typewriter {
+    width: 100%;
+    max-width: 850px;
+
+    min-height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 10px;
+    box-sizing: border-box;
+
+    font-family:
+        'Cormorant Garamond',
+        Georgia,
+        serif;
+
+    font-size: clamp(36px, 9vw, 72px);
+    line-height: 1.15;
+    font-weight: 400;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 12px rgba(210, 180, 255, 0.25),
+        0 0 35px rgba(150, 100, 255, 0.12);
+}
+
+
+/* ================================
+   OPEN YOUR GIFT BUTTON
+   ================================ */
+
+#giftButton {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+    max-width: calc(100vw - 48px);
+
+    min-height: 52px;
+
+    margin-top: 45px;
+
+    padding: 14px 28px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(215, 185, 255, 0.7);
+    border-radius: 50px;
+
+    background:
+        rgba(255, 255, 255, 0.055);
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 16px;
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+
+    box-shadow:
+        0 0 18px rgba(170, 120, 255, 0.15),
+        inset 0 0 15px rgba(255,255,255,0.025);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+#giftButton:hover {
+    transform: translateY(-4px);
+
+    background:
+        rgba(190, 145, 255, 0.12);
+
+    box-shadow:
+        0 0 28px rgba(190, 145, 255, 0.35),
+        0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+#giftButton:active {
+    transform: scale(0.97);
+}
+
+
+/* ================================
+   PHONE FIX
+   ================================ */
+
+@media (max-width: 480px) {
+
+    .hero {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    #typewriter {
+        min-height: 180px;
+        font-size: clamp(34px, 10vw, 52px);
+    }
+
+    #giftButton {
+        margin-top: 35px;
+
+        max-width: calc(100vw - 36px);
+
+        padding:
+            13px 23px;
+
+        font-size: 15px;
+    }
+  }
