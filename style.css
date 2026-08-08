@@ -1366,3 +1366,327 @@ body {
         font-size: 14px;
     }
                         }
+/* =========================================
+   CHAPTER SIX — LITTLE PIECES OF YOU
+   ========================================= */
+
+.memory-page {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(120, 80, 160, 0.12), transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(100, 70, 150, 0.10), transparent 35%),
+        #050505;
+    color: #fff;
+    font-family: Georgia, serif;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+
+.memory-header {
+    text-align: center;
+    padding: 80px 25px 35px;
+}
+
+.memory-chapter {
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: #c9a7ff;
+    margin-bottom: 18px;
+}
+
+.memory-header h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(42px, 11vw, 72px);
+    font-weight: 400;
+    line-height: 1;
+    margin: 0 0 25px;
+    text-shadow: 0 0 25px rgba(190, 150, 255, 0.25);
+}
+
+.memory-intro {
+    max-width: 520px;
+    margin: auto;
+    font-size: clamp(19px, 4.5vw, 25px);
+    line-height: 1.6;
+    color: #ddd5e5;
+}
+
+
+/* COLLAGE */
+
+.memory-collage {
+    position: relative;
+    width: min(94vw, 850px);
+    min-height: 1500px;
+    margin: 30px auto 0;
+}
+
+
+/* MEMORY CARDS */
+
+.memory-card {
+    position: absolute;
+    width: 260px;
+    padding: 9px;
+    background: #111;
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow:
+        0 20px 45px rgba(0,0,0,0.65),
+        0 0 25px rgba(150,100,255,0.08);
+    transition: transform 0.5s ease;
+}
+
+.memory-card img,
+.memory-card video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* PHOTO POSITIONS */
+
+.photo-one {
+    top: 30px;
+    left: 5%;
+    transform: rotate(-6deg);
+    z-index: 3;
+}
+
+.photo-two {
+    top: 250px;
+    right: 4%;
+    transform: rotate(7deg);
+    z-index: 2;
+}
+
+.photo-three {
+    top: 500px;
+    left: 8%;
+    transform: rotate(4deg);
+    z-index: 4;
+}
+
+
+/* VIDEO POSITIONS */
+
+.video-one {
+    top: 720px;
+    right: 6%;
+    transform: rotate(-5deg);
+    z-index: 3;
+}
+
+.video-two {
+    top: 950px;
+    left: 4%;
+    transform: rotate(6deg);
+    z-index: 5;
+}
+
+.video-three {
+    top: 1190px;
+    right: 8%;
+    transform: rotate(-7deg);
+    z-index: 2;
+}
+
+
+/* LITTLE MOVEMENT */
+
+.photo-one {
+    animation: floatOne 5s ease-in-out infinite;
+}
+
+.photo-two {
+    animation: floatTwo 6s ease-in-out infinite;
+}
+
+.photo-three {
+    animation: floatThree 5.5s ease-in-out infinite;
+}
+
+.video-one {
+    animation: floatTwo 6s ease-in-out infinite;
+}
+
+.video-two {
+    animation: floatOne 5.5s ease-in-out infinite;
+}
+
+.video-three {
+    animation: floatThree 6.5s ease-in-out infinite;
+}
+
+
+@keyframes floatOne {
+    0%, 100% {
+        margin-top: 0;
+        transform: rotate(-6deg);
+    }
+
+    50% {
+        margin-top: -10px;
+        transform: rotate(-3deg);
+    }
+}
+
+@keyframes floatTwo {
+    0%, 100% {
+        margin-top: 0;
+        transform: rotate(7deg);
+    }
+
+    50% {
+        margin-top: 12px;
+        transform: rotate(4deg);
+    }
+}
+
+@keyframes floatThree {
+    0%, 100% {
+        margin-top: 0;
+        transform: rotate(4deg);
+    }
+
+    50% {
+        margin-top: -8px;
+        transform: rotate(7deg);
+    }
+}
+
+
+/* NOTES */
+
+.memory-note {
+    display: block;
+    padding: 10px 5px 4px;
+    font-family: "Comic Sans MS", cursive;
+    font-size: 16px;
+    color: #eee;
+    text-align: center;
+}
+
+.note-one {
+    transform: rotate(-2deg);
+}
+
+.note-two {
+    transform: rotate(2deg);
+}
+
+.note-three {
+    transform: rotate(-1deg);
+}
+
+.video-note-one {
+    color: #d9b8ff;
+}
+
+.video-note-two {
+    color: #f0d9ff;
+}
+
+.video-note-three {
+    color: #ffb8d9;
+}
+
+
+/* ENDING */
+
+.memory-ending {
+    max-width: 650px;
+    margin: 20px auto 0;
+    padding: 40px 25px 100px;
+    text-align: center;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(21px, 5vw, 28px);
+    line-height: 1.6;
+}
+
+.memory-ending .divider {
+    margin: 10px 0 45px;
+    color: #d9b8ff;
+    text-shadow: 0 0 15px rgba(200,160,255,0.8);
+}
+
+.ending-love {
+    margin-top: 35px;
+    font-size: clamp(24px, 6vw, 34px);
+}
+
+.ending-love strong {
+    color: #fff;
+    text-shadow: 0 0 20px rgba(255,180,220,0.35);
+}
+
+
+/* NEXT BUTTON */
+
+.memory-ending .next-button {
+    display: inline-block;
+    margin-top: 45px;
+    padding: 14px 28px;
+    border: 1px solid rgba(210,180,255,0.7);
+    border-radius: 50px;
+    color: #fff;
+    background: rgba(255,255,255,0.05);
+    text-decoration: none;
+    font-family: Georgia, serif;
+    font-size: 17px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.memory-ending .next-button:hover {
+    background: rgba(190,140,255,0.15);
+    box-shadow: 0 0 30px rgba(190,140,255,0.4);
+}
+
+
+/* PHONE */
+
+@media (max-width: 600px) {
+
+    .memory-header {
+        padding-top: 60px;
+    }
+
+    .memory-collage {
+        width: 100%;
+        min-height: 1450px;
+    }
+
+    .memory-card {
+        width: 58vw;
+        max-width: 260px;
+    }
+
+    .photo-one {
+        left: 3%;
+    }
+
+    .photo-two {
+        right: 2%;
+    }
+
+    .photo-three {
+        left: 5%;
+    }
+
+    .video-one {
+        right: 3%;
+    }
+
+    .video-two {
+        left: 2%;
+    }
+
+    .video-three {
+        right: 5%;
+    }
+  }
