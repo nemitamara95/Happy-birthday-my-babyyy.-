@@ -1180,7 +1180,8 @@ transform:translateY(0);
         padding: 38px 22px 55px;
     }
           }
-/* ========================================
+
+    /* ========================================
    FRONT PAGE — FINAL POLISH
    ======================================== */
 
@@ -1191,16 +1192,13 @@ body {
         radial-gradient(circle at 50% 45%,
             rgba(110, 80, 170, 0.16),
             transparent 35%),
-        radial-gradient(circle at 20% 20%,
-            rgba(255, 255, 255, 0.04),
-            transparent 25%),
         linear-gradient(180deg, #020204 0%, #05040a 55%, #000000 100%);
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 
 /* ================================
-   STAR FIELD
+   STARS
    ================================ */
 
 .stars {
@@ -1209,7 +1207,6 @@ body {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    overflow: hidden;
     z-index: 0;
 
     background-image:
@@ -1239,7 +1236,7 @@ body {
     position: relative;
     z-index: 1;
 
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
 
     display: flex;
@@ -1249,9 +1246,7 @@ body {
 
     box-sizing: border-box;
 
-    padding:
-        70px 24px
-        calc(70px + env(safe-area-inset-bottom));
+    padding: 25px 18px;
 
     text-align: center;
 }
@@ -1263,15 +1258,16 @@ body {
 
 #typewriter {
     width: 100%;
-    max-width: 850px;
+    max-width: 650px;
 
-    min-height: 150px;
+    min-height: auto;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    padding: 0 10px;
+    padding: 0;
+
     box-sizing: border-box;
 
     font-family:
@@ -1279,7 +1275,9 @@ body {
         Georgia,
         serif;
 
-    font-size: clamp(36px, 9vw, 72px);
+    /* SMALLER */
+    font-size: clamp(30px, 7vw, 52px);
+
     line-height: 1.15;
     font-weight: 400;
 
@@ -1287,12 +1285,12 @@ body {
 
     text-shadow:
         0 0 12px rgba(210, 180, 255, 0.25),
-        0 0 35px rgba(150, 100, 255, 0.12);
+        0 0 30px rgba(150, 100, 255, 0.12);
 }
 
 
 /* ================================
-   OPEN YOUR GIFT BUTTON
+   BUTTON
    ================================ */
 
 #giftButton {
@@ -1301,39 +1299,31 @@ body {
     align-items: center;
     justify-content: center;
 
-    width: auto;
-    max-width: calc(100vw - 48px);
+    margin-top: 28px;
 
-    min-height: 52px;
+    padding: 12px 24px;
 
-    margin-top: 45px;
-
-    padding: 14px 28px;
+    min-height: 48px;
 
     box-sizing: border-box;
 
     border: 1px solid rgba(215, 185, 255, 0.7);
     border-radius: 50px;
 
-    background:
-        rgba(255, 255, 255, 0.055);
+    background: rgba(255, 255, 255, 0.055);
 
     color: #ffffff;
 
     text-decoration: none;
 
-    font-family:
-        Georgia,
-        serif;
-
-    font-size: 16px;
+    font-family: Georgia, serif;
+    font-size: 15px;
     letter-spacing: 1px;
 
     white-space: nowrap;
 
     box-shadow:
-        0 0 18px rgba(170, 120, 255, 0.15),
-        inset 0 0 15px rgba(255,255,255,0.025);
+        0 0 18px rgba(170, 120, 255, 0.15);
 
     transition:
         transform 0.3s ease,
@@ -1342,14 +1332,12 @@ body {
 }
 
 #giftButton:hover {
-    transform: translateY(-4px);
+    transform: translateY(-3px);
 
-    background:
-        rgba(190, 145, 255, 0.12);
+    background: rgba(190, 145, 255, 0.12);
 
     box-shadow:
-        0 0 28px rgba(190, 145, 255, 0.35),
-        0 8px 25px rgba(0, 0, 0, 0.4);
+        0 0 28px rgba(190, 145, 255, 0.35);
 }
 
 #giftButton:active {
@@ -1358,29 +1346,23 @@ body {
 
 
 /* ================================
-   PHONE FIX
+   SMALL PHONES
    ================================ */
 
 @media (max-width: 480px) {
 
     .hero {
-        padding-left: 18px;
-        padding-right: 18px;
+        padding: 20px 16px;
     }
 
     #typewriter {
-        min-height: 180px;
-        font-size: clamp(34px, 10vw, 52px);
+        font-size: clamp(28px, 8vw, 44px);
     }
 
     #giftButton {
-        margin-top: 35px;
-
-        max-width: calc(100vw - 36px);
-
-        padding:
-            13px 23px;
-
-        font-size: 15px;
+        margin-top: 24px;
+        padding: 11px 22px;
+        min-height: 46px;
+        font-size: 14px;
     }
-  }
+                        }
