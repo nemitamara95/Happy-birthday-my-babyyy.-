@@ -178,3 +178,33 @@ transform:translateY(0);
     box-shadow: 0 0 30px rgba(190, 140, 255, 0.4);
     transform: translateY(-3px);
 }
+/* MOBILE FIX */
+@media (max-width: 600px) {
+
+    .chapter-container {
+        padding: 50px 18px 70px;
+    }
+
+    .chapter-page h1 {
+        font-size: clamp(36px, 10vw, 55px);
+        line-height: 1.1;
+    }
+
+    .chapter-text {
+        font-size: 20px;
+        line-height: 1.7;
+    }
+
+    .chapter-ending {
+        font-size: 25px;
+        line-height: 1.5;
+    }
+
+    .photo-frame {
+        width: min(78vw, 320px);
+    }
+
+    .little-joke {
+        font-size: 18px;
+    }
+                     }
