@@ -815,4 +815,309 @@ transform:translateY(0);
     .memory-text {
         font-size: 21px;
     }
+}/* ========================================
+   CHAPTER FIVE — THE LOVE LETTER
+   ======================================== */
+
+.letter-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 50% 20%, rgba(120, 90, 50, 0.16), transparent 35%),
+        linear-gradient(180deg, #030303 0%, #0a0806 55%, #000000 100%);
+    color: #e9dfd2;
+    font-family: Georgia, serif;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
+
+.letter-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 65px 20px 90px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.letter-page .chapter-number {
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: #c9a77d;
+    margin-bottom: 18px;
+}
+
+.letter-page h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(40px, 10vw, 68px);
+    font-weight: 400;
+    line-height: 1.05;
+    color: #f5eadc;
+    margin: 0 0 18px;
+    text-shadow: 0 0 25px rgba(200, 160, 100, 0.15);
+}
+
+.letter-hint {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    font-style: italic;
+    color: #a99a8b;
+    margin-bottom: 35px;
+}
+
+
+/* ================================
+   SCROLL
+   ================================ */
+
+.scroll-wrapper {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.scroll-top,
+.scroll-bottom {
+    position: relative;
+    z-index: 3;
+    height: 38px;
+    margin: 0 12px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #9b7247 0%,
+            #c39a67 35%,
+            #8b6038 70%,
+            #634226 100%
+        );
+
+    border: 1px solid #4e321d;
+    border-radius: 50%;
+    
+    box-shadow:
+        0 8px 15px rgba(0, 0, 0, 0.5),
+        inset 0 4px 8px rgba(255, 230, 190, 0.25),
+        inset 0 -5px 8px rgba(50, 25, 10, 0.3);
+}
+
+.scroll-top {
+    margin-bottom: -17px;
+}
+
+.scroll-bottom {
+    margin-top: -17px;
+}
+
+
+/* ================================
+   PARCHMENT
+   ================================ */
+
+.parchment {
+    position: relative;
+    max-height: 0;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(120, 75, 35, 0.12),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(100, 55, 25, 0.1),
+            transparent 30%
+        ),
+        #d9bd91;
+
+    color: #38271b;
+
+    border-left: 2px solid #704b2b;
+    border-right: 2px solid #704b2b;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.65),
+        inset 0 0 45px rgba(85, 45, 15, 0.25);
+
+    transition:
+        max-height 1.8s ease,
+        padding 1.8s ease;
+}
+
+.parchment::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 4px,
+            rgba(80, 45, 20, 0.025) 5px
+        );
+
+    pointer-events: none;
+}
+
+.parchment.letter-open {
+    max-height: 10000px;
+    overflow-y: auto;
+}
+
+
+/* ================================
+   LETTER CONTENT
+   ================================ */
+
+.letter-content {
+    padding: 50px 35px 65px;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+}
+
+.letter-content p {
+    margin: 0 0 25px;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(18px, 4.5vw, 23px);
+    line-height: 1.75;
+}
+
+.letter-greeting {
+    font-size: clamp(25px, 6vw, 34px) !important;
+    margin-bottom: 30px !important;
+}
+
+.letter-content strong {
+    font-weight: 600;
+}
+
+.letter-content blockquote {
+    margin: 30px 10px;
+    padding: 18px 22px;
+
+    border-left: 3px solid #76502e;
+
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(21px, 5vw, 27px);
+    line-height: 1.55;
+    font-style: italic;
+
+    color: #4a3020;
+}
+
+.special-line {
+    text-align: center;
+    font-size: clamp(23px, 5.5vw, 30px) !important;
+    font-style: italic;
+    color: #4b3020;
+}
+
+.blessing {
+    text-align: center;
+    font-size: clamp(25px, 6vw, 34px) !important;
+    font-weight: 600;
+    color: #442a1b;
+}
+
+.birthday-line {
+    margin-top: 45px !important;
+    text-align: center;
+
+    font-size: clamp(27px, 7vw, 38px) !important;
+    font-weight: 600;
+
+    color: #382318;
+}
+
+.letter-signature {
+    margin-top: 45px;
+    text-align: right;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 22px;
+}
+
+.letter-signature p {
+    margin-bottom: 4px;
+}
+
+.letter-signature strong {
+    font-size: 27px;
+}
+
+
+/* ================================
+   OPEN BUTTON
+   ================================ */
+
+.open-letter-button {
+    margin: 35px auto 0;
+    padding: 15px 28px;
+
+    border: 1px solid rgba(190, 150, 100, 0.7);
+    border-radius: 50px;
+
+    background: rgba(130, 90, 50, 0.12);
+
+    color: #e8d5bd;
+
+    font-family: Georgia, serif;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 20px rgba(150, 100, 50, 0.12);
+
+    transition: all 0.3s ease;
+}
+
+.open-letter-button:hover {
+    background: rgba(160, 110, 60, 0.2);
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 30px rgba(170, 120, 70, 0.25);
+}
+
+.letter-next {
+    display: inline-block;
+    margin-top: 45px;
+}
+
+
+/* ================================
+   MOBILE
+   ================================ */
+
+@media (max-width: 600px) {
+
+    .letter-container {
+        padding: 50px 14px 70px;
+    }
+
+    .letter-content {
+        padding: 40px 22px 50px;
+    }
+
+    .letter-content p {
+        line-height: 1.7;
+    }
+
+    .letter-content blockquote {
+        margin-left: 3px;
+        margin-right: 3px;
+        padding-left: 17px;
+    }
+
+    .scroll-top,
+    .scroll-bottom {
+        margin-left: 7px;
+        margin-right: 7px;
+    }
+                     }
