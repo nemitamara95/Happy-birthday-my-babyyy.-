@@ -1909,3 +1909,113 @@ body {
         padding-bottom: 50px;
     }
                         }
+/* =========================================
+   CHAPTER SIX — FINAL COLLAGE FIX
+   ADD THIS AT THE VERY BOTTOM
+   ========================================= */
+
+.memory-collage {
+    width: 94% !important;
+    max-width: 900px !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(145px, 1fr)) !important;
+    gap: 28px 18px !important;
+
+    margin: 25px auto 0 !important;
+}
+
+
+/* MAKE THE ACTUAL CARDS WIDE */
+
+.memory-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 7px !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* BIGGER, FULLER IMAGES */
+
+.memory-card img,
+.memory-card video {
+    width: 100% !important;
+
+    height: 250px !important;
+
+    object-fit: cover !important;
+
+    display: block !important;
+}
+
+
+/* KEEP THE NOTES SMALL */
+
+.memory-note {
+    font-size: 12px !important;
+    line-height: 1.25 !important;
+    padding: 9px 3px 5px !important;
+}
+
+
+/* DON'T LET THE ENDING TAKE OVER THE SCREEN */
+
+.memory-ending {
+    max-width: 500px !important;
+
+    margin: 45px auto 0 !important;
+
+    padding: 10px 20px 70px !important;
+
+    font-size: 19px !important;
+
+    line-height: 1.45 !important;
+}
+
+.memory-ending p {
+    margin: 15px 0 !important;
+}
+
+.ending-love {
+    font-size: 23px !important;
+}
+
+
+/* BUTTON */
+
+.memory-ending .next-button {
+    margin-top: 25px !important;
+}
+
+
+/* PHONE */
+
+@media (max-width: 500px) {
+
+    .memory-collage {
+        width: 92% !important;
+
+        grid-template-columns: repeat(2, minmax(140px, 1fr)) !important;
+
+        gap: 25px 14px !important;
+    }
+
+    .memory-card img,
+    .memory-card video {
+        height: 240px !important;
+    }
+
+    .memory-note {
+        font-size: 12px !important;
+    }
+
+    .memory-ending {
+        font-size: 18px !important;
+    }
+
+    .ending-love {
+        font-size: 22px !important;
+    }
+  }
