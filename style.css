@@ -1474,23 +1474,6 @@ body {
 }
 
 
-/* =========================
-   VIDEOS
-   ========================= */
-
-.memory-card img {
-    width: 100%;
-    height: auto;
-    max-height: none;
-
-    display: block;
-
-    object-fit: contain;
-
-    background: #000;
-}
-}
-
 
 /* =========================
    COLLAGE ROTATIONS
@@ -1646,37 +1629,316 @@ body {
     letter-spacing: 1px;
 }
 
+/* =========================================
+   CHAPTER SIX — LITTLE PIECES OF YOU
+   FINAL COLLAGE
+   ========================================= */
 
-/* =========================
+.memory-page {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(130, 90, 180, 0.14), transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(100, 70, 150, 0.10), transparent 35%),
+        #050505;
+    color: white;
+}
+
+/* HEADER */
+
+.memory-header {
+    text-align: center;
+    padding: 60px 24px 35px;
+}
+
+.memory-chapter {
+    font-size: 12px;
+    letter-spacing: 6px;
+    color: #c9a7ff;
+    margin-bottom: 18px;
+}
+
+.memory-header h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(42px, 11vw, 70px);
+    font-weight: 400;
+    line-height: 1;
+    margin: 0 0 25px;
+}
+
+.memory-intro {
+    max-width: 520px;
+    margin: auto;
+    font-size: clamp(19px, 5vw, 25px);
+    line-height: 1.6;
+    color: #ddd5e5;
+}
+
+
+/* =========================================
+   COLLAGE
+   ========================================= */
+
+.memory-collage {
+    width: 94% !important;
+    max-width: 850px !important;
+    margin: 30px auto 60px !important;
+
+    display: grid !important;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+    gap: 35px 22px !important;
+
+    align-items: start !important;
+}
+
+
+/* =========================================
+   PHOTO / VIDEO CARD
+   ========================================= */
+
+.memory-card {
+    position: relative !important;
+
+    width: 100% !important;
+    max-width: none !important;
+
+    padding: 8px !important;
+
+    background: #111 !important;
+
+    border: 1px solid rgba(255,255,255,0.18) !important;
+
+    box-sizing: border-box !important;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.7),
+        0 0 20px rgba(150,100,255,0.08);
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   ACTUAL PHOTOS
+   ========================================= */
+
+.memory-card img {
+    display: block !important;
+
+    width: 100% !important;
+
+    height: auto !important;
+
+    max-width: 100% !important;
+    max-height: none !important;
+
+    object-fit: contain !important;
+
+    background: #000;
+}
+
+
+/* =========================================
+   VIDEOS
+   ========================================= */
+
+.memory-card video {
+    display: block !important;
+
+    width: 100% !important;
+
+    height: auto !important;
+
+    max-height: 360px;
+
+    object-fit: contain !important;
+
+    background: #000;
+}
+
+
+/* =========================================
+   LITTLE ROTATIONS
+   ========================================= */
+
+.photo-one {
+    transform: rotate(-2.5deg);
+}
+
+.photo-two {
+    transform: rotate(2.5deg);
+}
+
+.photo-three {
+    transform: rotate(-1.5deg);
+}
+
+.video-one {
+    transform: rotate(2deg);
+}
+
+.video-two {
+    transform: rotate(-2deg);
+}
+
+.video-three {
+    transform: rotate(1.5deg);
+}
+
+
+/* =========================================
+   NOTES
+   ========================================= */
+
+.memory-note {
+    display: block;
+
+    padding: 13px 6px 7px;
+
+    text-align: center;
+
+    font-family: "Comic Sans MS", cursive;
+
+    font-size: 14px;
+
+    line-height: 1.35;
+
+    color: #eee;
+}
+
+.note-one {
+    transform: rotate(-2deg);
+}
+
+.note-two {
+    transform: rotate(2deg);
+}
+
+.note-three {
+    transform: rotate(-1deg);
+}
+
+.video-note-one {
+    color: #d9b8ff;
+}
+
+.video-note-two {
+    color: #f0d9ff;
+}
+
+.video-note-three {
+    color: #ffb8d9;
+}
+
+
+/* =========================================
+   ENDING
+   ========================================= */
+
+.memory-ending {
+    max-width: 650px;
+
+    margin: 40px auto 0;
+
+    padding: 20px 25px 90px;
+
+    text-align: center;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: clamp(22px, 5vw, 29px);
+
+    line-height: 1.6;
+}
+
+.memory-ending .divider {
+    margin: 10px 0 40px;
+
+    color: #d9b8ff;
+
+    text-shadow: 0 0 15px rgba(200,160,255,0.8);
+}
+
+.ending-love {
+    margin-top: 35px;
+    font-size: clamp(25px, 6vw, 36px);
+}
+
+.ending-love strong {
+    text-shadow: 0 0 20px rgba(255,180,220,0.35);
+}
+
+
+/* =========================================
+   NEXT BUTTON
+   ========================================= */
+
+.memory-ending .next-button {
+    display: inline-block;
+
+    margin-top: 45px;
+
+    padding: 15px 30px;
+
+    border: 1px solid rgba(210,180,255,0.7);
+
+    border-radius: 50px;
+
+    color: white;
+
+    background: rgba(255,255,255,0.05);
+
+    text-decoration: none;
+
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+}
+
+
+/* =========================================
    PHONE
-   ========================= */
+   ========================================= */
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
+
+    .memory-header {
+        padding: 50px 20px 30px;
+    }
 
     .memory-collage {
-        width: 96%;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 24px 12px;
+        width: 94% !important;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 28px 14px !important;
     }
 
     .memory-card {
-        padding: 6px;
+        padding: 6px !important;
     }
 
     .memory-card img {
-        width: 100%;
-        height: auto;
-        max-height: none;
-        object-fit: contain;
+        width: 100% !important;
+        height: auto !important;
     }
 
     .memory-card video {
-        width: 100%;
-        height: 210px;
-        object-fit: cover;
+        width: 100% !important;
+        height: auto !important;
     }
 
     .memory-note {
         font-size: 12px;
+        padding: 10px 3px 5px;
     }
-}
+  }
+/* 
