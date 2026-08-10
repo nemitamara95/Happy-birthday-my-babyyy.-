@@ -2018,4 +2018,95 @@ body {
     .ending-love {
         font-size: 22px !important;
     }
-  }
+  }/* =========================================
+   CHAPTER SIX — FINAL COLLAGE FIX
+   ========================================= */
+
+/* Give the collage the full width it needs */
+.memory-collage {
+    width: 92%;
+    max-width: 700px;
+    margin: 30px auto;
+    
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    
+    align-items: start;
+}
+
+/* Make every card properly sized */
+.memory-card {
+    width: 100%;
+    min-width: 0;
+    padding: 6px;
+    box-sizing: border-box;
+
+    transform: none !important;
+}
+
+/* IMPORTANT: let the actual media show properly */
+.memory-card img,
+.memory-card video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    
+    object-fit: cover;
+    display: block;
+}
+
+/* Keep the cute notes, but don't let them make cards huge */
+.memory-note {
+    display: block;
+    padding: 9px 3px 5px;
+    font-size: 13px;
+    line-height: 1.2;
+}
+
+/* Slightly smaller chapter text */
+.memory-header {
+    padding: 45px 20px 25px;
+}
+
+.memory-header h1 {
+    font-size: clamp(38px, 9vw, 58px);
+    margin-bottom: 15px;
+}
+
+.memory-intro {
+    font-size: clamp(16px, 4vw, 21px);
+    line-height: 1.45;
+}
+
+/* Make the ending fit comfortably */
+.memory-ending {
+    margin-top: 35px;
+    padding: 20px 20px 70px;
+}
+
+.memory-ending p {
+    font-size: clamp(18px, 4.5vw, 25px);
+    line-height: 1.45;
+}
+
+/* PHONE */
+@media (max-width: 500px) {
+
+    .memory-collage {
+        width: 92%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .memory-card img,
+    .memory-card video {
+        height: auto;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+    }
+
+    .memory-note {
+        font-size: 12px;
+    }
+}
