@@ -2110,3 +2110,109 @@ body {
         font-size: 12px;
     }
 }
+/* =========================================
+   CHAPTER SEVEN — THE NEXT CHAPTER
+   ========================================= */
+
+.final-page {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background:
+        radial-gradient(circle at 50% 20%, rgba(150, 100, 220, 0.12), transparent 35%),
+        #050505;
+    color: #fff;
+    font-family: Georgia, serif;
+}
+
+.final-container {
+    width: min(90%, 650px);
+    margin: auto;
+    padding: 80px 20px 70px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.final-chapter {
+    color: #c9a7ff;
+    font-size: 12px;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+}
+
+.final-container h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(42px, 11vw, 72px);
+    font-weight: 400;
+    line-height: 1;
+    margin: 0 0 35px;
+}
+
+.final-container p {
+    font-size: clamp(18px, 4.5vw, 24px);
+    line-height: 1.7;
+    color: #e5e0e8;
+    margin: 28px 0;
+}
+
+.final-divider {
+    color: #d9b8ff;
+    font-size: 22px;
+    margin: 35px 0;
+    text-shadow: 0 0 15px rgba(200, 160, 255, 0.7);
+}
+
+.final-highlight {
+    margin: 45px 0 !important;
+}
+
+.final-highlight strong {
+    font-size: clamp(25px, 6vw, 36px);
+    color: #fff;
+}
+
+.final-ending {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(25px, 6vw, 34px) !important;
+}
+
+.final-love {
+    font-size: 28px !important;
+    color: #fff !important;
+}
+
+.beginning-button {
+    display: inline-block;
+    margin-top: 45px;
+    padding: 15px 26px;
+
+    border: 1px solid rgba(210, 180, 255, 0.7);
+    border-radius: 50px;
+
+    color: #fff;
+    background: rgba(255, 255, 255, 0.04);
+
+    text-decoration: none;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+
+    transition: 0.3s ease;
+}
+
+.beginning-button:hover {
+    background: rgba(190, 140, 255, 0.15);
+    box-shadow: 0 0 30px rgba(190, 140, 255, 0.35);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 500px) {
+
+    .final-container {
+        padding-top: 60px;
+    }
+
+    .final-container p {
+        line-height: 1.6;
+    }
+  }
