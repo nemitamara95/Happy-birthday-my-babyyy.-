@@ -2445,3 +2445,32 @@ body {
 .ending-screen.show .ending-message {
     opacity: 1;
   }
+/* =========================================
+   CHAPTER 7 — EMERGENCY MOBILE SCROLL FIX
+   ========================================= */
+
+html,
+body {
+    height: auto !important;
+    min-height: 100% !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+
+.final-page {
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow: visible !important;
+}
+
+/* Keep the closing curtain completely out of the way
+   until it is actually activated */
+.ending-screen {
+    pointer-events: none;
+}
+
+.ending-screen:not(.show) {
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
