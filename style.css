@@ -2128,7 +2128,7 @@ body {
 .final-container {
     width: min(90%, 650px);
     margin: auto;
-    padding: 80px 20px 70px;
+    padding: 50px 20px 70px;
     box-sizing: border-box;
     text-align: center;
 }
@@ -2149,10 +2149,10 @@ body {
 }
 
 .final-container p {
-    font-size: clamp(18px, 4.5vw, 24px);
-    line-height: 1.7;
+    font-size: clamp(17px, 4vw, 22px);
+    line-height: 1.55;
     color: #e5e0e8;
-    margin: 28px 0;
+    margin: 18px 0;
 }
 
 .final-divider {
@@ -2209,12 +2209,16 @@ body {
 @media (max-width: 500px) {
 
     .final-container {
-        padding-top: 60px;
+        padding-top: 40px;
+        padding-bottom: 60px;
     }
 
     .final-container p {
-        line-height: 1.6;
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 18px 0;
     }
+
   }/* =========================================
    CHAPTER SEVEN — CLOSING CURTAIN
    ========================================= */
